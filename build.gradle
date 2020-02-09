@@ -1,6 +1,6 @@
 /*
     Coleman Beiler
-    DocumentMonitor build.gradle
+    multi-module-template build.gradle
 */
 
 buildscript {
