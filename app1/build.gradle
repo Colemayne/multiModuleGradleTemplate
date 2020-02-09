@@ -1,0 +1,17 @@
+dependencies {
+    compile project(':common')
+}
+
+bootJar {
+    baseName = 'app1'
+    version = '0.0.1'
+    enabled = true
+}
+
+jar {
+    enabled = false
+}
+
+task buildIt {
+    dependsOn('clean',':common:bootJar','bootJar')
+}

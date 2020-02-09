@@ -1,0 +1,10 @@
+bootJar {
+    baseName = 'common'
+    version = '0.0.1'
+    enabled = false
+}
+
+jar {
+    enabled = true
+}
+

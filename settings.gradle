@@ -1,0 +1,4 @@
+rootProject.name = 'DL'
+include 'common'
+include 'app1' 
+include 'app2'

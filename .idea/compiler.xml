@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="CompilerConfiguration">
+    <bytecodeTargetLevel>
+      <module name="LargeScaleExtractionTool.app1.main" target="1.8" />
+      <module name="LargeScaleExtractionTool.app1.test" target="1.8" />
+      <module name="LargeScaleExtractionTool.app2.main" target="1.8" />
+      <module name="LargeScaleExtractionTool.app2.test" target="1.8" />
+      <module name="LargeScaleExtractionTool.common.main" target="1.8" />
+      <module name="LargeScaleExtractionTool.common.test" target="1.8" />
+      <module name="LargeScaleExtractionTool.main" target="1.8" />
+      <module name="LargeScaleExtractionTool.template.main" target="1.8" />
+      <module name="LargeScaleExtractionTool.template.test" target="1.8" />
+      <module name="LargeScaleExtractionTool.test" target="1.8" />
+      <module name="LargeScaleExtractionTool.Watcher.main" target="1.8" />
+      <module name="LargeScaleExtractionTool.Watcher.test" target="1.8" />
+    </bytecodeTargetLevel>
+  </component>
+</project>
