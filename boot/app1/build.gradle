@@ -1,5 +1,5 @@
 dependencies {
-    compile project(':common')
+    compile project(':lib:common')
 }
 
 bootJar {
@@ -10,8 +10,4 @@ bootJar {
 
 jar {
     enabled = false
-}
-
-task buildIt {
-    dependsOn('clean',':common:bootJar','bootJar')
 }

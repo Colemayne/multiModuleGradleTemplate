@@ -1,0 +1,16 @@
+
+subprojects {
+    apply plugin: 'java'
+
+    sourceCompatibility = 1.8
+    targetCompatibility = 1.8
+
+    dependencies {
+        compile deps.gson
+        compile deps.spring_boot_starter_web
+        compile deps.spring_boot_devtools
+        compile deps.jackson_databind
+        compile deps.mysql_connector
+        testCompile deps.junit
+    }
+}

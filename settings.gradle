@@ -1,4 +1,9 @@
 rootProject.name = 'DL'
-include 'common'
-include 'app1' 
-include 'app2'
+
+['boot', 'lib'].each { projectType ->
+new File(settings.rootDir, projectType).eachFile groovy.io.FileType.DIRECTORIES, {
+    if (!it.isHidden()) {
+        include "${projectType}:${it.name}"
+    }
+  }
+}

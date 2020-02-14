@@ -4,6 +4,7 @@
 */
 
 buildscript {
+    apply from: 'versions.gradle'
     repositories {
         mavenCentral()
     }
@@ -14,31 +15,18 @@ buildscript {
 
 allprojects {
 
-    apply plugin: 'java'
-    apply plugin: 'org.springframework.boot'
-    apply plugin: 'io.spring.dependency-management'
-
-    sourceCompatibility = 1.8
-    targetCompatibility = 1.8
-
     repositories {
         mavenCentral()
     }
+}
 
-    dependencies {
-        compile("com.google.code.gson:gson:2.7")
-        compile("org.springframework.boot:spring-boot-starter-web")
-        compile("org.springframework:spring-web")
-        compile("org.springframework.boot:spring-boot-devtools")
-        compile("com.fasterxml.jackson.core:jackson-databind")
-        compile("mysql:mysql-connector-java")
-        testCompile("junit:junit")
-    }
+task clean(type: Delete) {
+    delete rootProject.buildDir
 }
 
 
 task compileApp {
-    dependsOn('clean',':common:bootJar',':app1:bootJar',':app2:bootJar') doLast {
+    dependsOn('clean',':lib:common:jar',':boot:app1:bootJar',':boot:app2:bootJar') doLast {
         copy { from "app1/build/libs" into "${project.getBuildDir()}/services"; include "*.jar" }
         copy { from "app2/build/libs" into "${project.getBuildDir()}/services"; include "*.jar" }
     }
